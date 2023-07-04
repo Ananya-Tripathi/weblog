@@ -42,6 +42,7 @@ const CreatePost = () => {
     data.set("summary", summary);
     data.set("content", content);
     data.set("file", file[0]);
+    data.set("likes", 0);
     ev.preventDefault();
 
     const response = await fetch("http://localhost:4000/post", {
@@ -54,7 +55,7 @@ const CreatePost = () => {
     }
   }
   if (redirect) {
-    return <Navigate to={"/"} />;
+    return <Navigate to={"/posts"} />;
   }
   return (
     <form onSubmit={createNewPost}>

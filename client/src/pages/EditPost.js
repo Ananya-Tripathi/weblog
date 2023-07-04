@@ -56,7 +56,7 @@ const EditPost = () => {
       credentials: "include",
     });
     if (response.ok) {
-      //   setRedirect(true);
+        setRedirect(true);
     }
   }
 

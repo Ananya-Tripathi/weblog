@@ -51,6 +51,7 @@ app.post("/login", async (req, res) => {
       });
     });
   } else {
+    alert("Wrong credentials");
     res.status(400).json("wrong credentials");
   }
 });
@@ -114,7 +115,7 @@ app.put("/post", uploadMiddleware.single("file"), async (req, res) => {
       res.status(400).json("you are not the author");
       // throw "you are not the author";
     }
-    await postDoc.update({
+    await postDoc.updateOne({
       title,
       summary,
       content,
@@ -132,7 +133,20 @@ app.get("/post/:id", async (req, res) => {
 });
 
 app.post("/logout", (req, res) => {
-  res.cookie("token", "").json("ok");
+  try {
+    res.cookie("token", "").json("ok");
+  } catch (err) {
+    res.json(err);
+  }
+});
+app.delete("/post/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    await post.findByIdAndRemove(id);
+    res.json("post deleted");
+  } catch (err) {
+    res.json(err);
+  }
 });
 app.listen(4000);
 //mongodb+srv://yana:goli@cluster0.2gpxkel.mongodb.net/?retryWrites=true&w=majority
