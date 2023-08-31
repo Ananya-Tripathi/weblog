@@ -9,7 +9,7 @@ Here are some of the features of WEBlog:
 
 I hope you enjoy using WEBlog!
 
-##Preview:
+## Preview:
 
 ![image](https://github.com/Ananya-Tripathi/weblog/assets/85894546/f90b1eb6-36f4-4110-91ca-36f07bed14d6)
 ![image](https://github.com/Ananya-Tripathi/weblog/assets/85894546/c747f7a9-ba2d-4cde-9d2a-5f7ef5d48243)
