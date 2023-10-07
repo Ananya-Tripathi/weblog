@@ -7,7 +7,6 @@ body {
   color: #222;
   font-family: "Poppins", sans-serif;
   background-color: #f7f2fa;
-  
 }
 button,
 a {
@@ -24,7 +23,7 @@ main {
 header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   padding: 20px 10px 0;
   align-items: center;
   color: #9932cc;
@@ -33,7 +32,8 @@ header a {
   text-decoration: none;
 }
 header a.logo {
-  font-weight: bold;
+  font-weight: semi-bold;
+  font-style: italic;
   font-size: 1.5rem;
 }
 header nav {
@@ -45,8 +45,11 @@ div.post {
   grid-template-columns: 1fr;
   /* grid-template-columns: 0.9fr 1fr; */
   gap: 20px;
-  margin-bottom: 30px;
-  height: 11rem;
+  margin-bottom: 10px;
+  height: 14rem;
+  padding: 8px;
+  border-radius: 20px;
+  background-color: white;
 }
 
 @media screen and (min-width: 700px) {
@@ -93,6 +96,8 @@ div.post div.image {
 
 form.login,
 form.register {
+  cursor: pointer;
+  color: pink;
   max-width: 400px;
   margin: 0 auto;
 }
