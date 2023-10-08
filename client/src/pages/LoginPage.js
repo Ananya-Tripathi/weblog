@@ -4,6 +4,8 @@ import { Navigate } from "react-router-dom";
 import { UserContext } from "../UserContext";
 import RegisterPage from "./RegisterPage";
 const LoginPage = () => {
+  
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [redirect, setRedirect] = useState("");
@@ -51,12 +53,8 @@ const LoginPage = () => {
   return (
     <>
       <div style={enter}>
-        <p onClick={handleLogin} style={{ cursor: "pointer" }}>
-          Login
-        </p>
-        <p onClick={handleRegister} style={{ cursor: "pointer" }}>
-          Register
-        </p>
+        <p onClick={handleLogin}>Login</p>
+        <p onClick={handleRegister}>Register</p>
       </div>
       {loginn ? (
         <form action="" className="login" onSubmit={login}>

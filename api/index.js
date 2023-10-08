@@ -149,4 +149,4 @@ app.delete("/post/:id", async (req, res) => {
   }
 });
 app.listen(4000);
-
+//mongodb+srv://yana:goli@cluster0.2gpxkel.mongodb.net/?retryWrites=true&w=majority

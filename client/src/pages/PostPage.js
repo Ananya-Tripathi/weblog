@@ -35,7 +35,6 @@ const PostPage = () => {
   if (!postInfo) return "";
   return (
     <div className="post-page">
-    
       <div className="heading">
         <h1>{postInfo.title}</h1>
       </div>
